@@ -1,0 +1,34 @@
+p {
+    color: #6cf;
+}
+
+html {
+    background-color: #00539F;
+    font-size: 10px;
+    font-family: "Open Sans" , sans-serif;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+p, li {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+body {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #FF9500;
+    padding: 0 20px 20px 20px;
+    border: 5px solid black;
+  }
+
+  img {
+    
+   width: 60em;
+   height: 20em; 
+  }
