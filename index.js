@@ -9,3 +9,5 @@ console.log(fuga)
 
 const p = document.createElement('p')
 console.log(p)
+
+console.count()
