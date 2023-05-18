@@ -1,3 +1,18 @@
+.header {
+
+
+}
+
+.main {
+
+
+}
+
+.footer {
+
+
+}
+
 p {
     color: rgb(57, 162, 99);
 }
@@ -29,6 +44,10 @@ body {
 
   img {
     
-   width: 60em;
-   height: 20em; 
+    top: 60ex;
+    bottom: 60ex;
+    right: 60px;
+    left: 60ex;
+    
+   
   }
