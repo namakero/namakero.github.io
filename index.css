@@ -44,10 +44,8 @@ body {
 
   img {
     
-    top: 60px;
-    bottom: 60px;
-    right: 60px;
-    left: 60px;
+    width: 30px;
+    height: 20px
     
    
   }
