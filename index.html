@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head> 
-
-
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>namakero</title>
         <link href="index.css" rel="stylesheet">
-
-
     </head>
     <body>
-
-
-        <div class="header">
-            <img src="images/firefox-icon.png" alt="おれのイメージ画像">
+        <header>
+            <img src="images/firefox-icon.png" alt="おれのイメージ画像" class="namakero">
             <h1>なまけろのページ</h1>
-        </div>
-
-
-        <div class="main">
-            <p>My favorite food is</p>
-
-            <ul>
-                <li>salmon</li>
-                <li>shrimp</li>
-                <li>tuna</li>
-            </ul>
-
-            <p> that is seafood.</p>
-        </div>
-
-
-        <div class="footer">
+        </header>
+        <main>
+            <h2>counter</h2>
+            <div id="counter">
+                <button type="button" id="countUp"> + </button>
+                <span id="countDi"> 0 </span>
+                <button type="button" id="countDo"> - </button>
+                <button type="button" id="countRe"> reset </button>
+            </div>
+            <h2>todo list</h2>
+             <div id="table">
+             <input type="text" id="inputText">
+             <button type="button" id="enter">入力決定</button>
+             <ul id="list">
+             </ul>
+             <span></span>
+             </div>
+        </main>
+        <hooter>
             <a href="https://namakero.github.io/">This page's link is my pages</a>
-        </div>
-
-        
+        </hooter>
+        <script src="index.js"></script>
     </body>
 </html>
