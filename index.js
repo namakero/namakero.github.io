@@ -1,26 +1,49 @@
+let toDo = () => {
+    let taskArray = [];
+    let id = 0;
 
-main()
-toDo()
-function toDo() {
-    const ary = [];
-    const inputText = document.getElementById("inputText");
     const enter = document.getElementById("enter");
-    const list = document.getElementById("list");
+    enter.addEventListener("click", () => {
+      const inputText = document.getElementById("inputText");
+      const content = inputText.value;
+      inputText.value = "";
+      const task = {
+        content: content,
+        id: id, 
+      };
+      id++;
+      taskArray.push(task);
+      update();
+    });
 
-    inputText.addEventListener("input", function (Text) {
-        ary.push(text);
-    })
+    let update = () => {
+      const taskList = document.getElementById("list");
+      while(taskList.firstChild !== null) {
+        taskList.removeChild(taskList.firstChild);
+      }
+      for(let i = 0; i < taskArray.length; i++){
+        const task = taskArray[i];
 
-    const listAfter = document.createElement("li");
-    listAfter.textContent = ary[ary.length];
-    element.appendChild(list);
+        const taskDiv = document.createElement("div");
+        taskDiv.className = "task";
+        taskDiv.append(task.content);
 
-    
-
-
+        const deleteButton = document.createElement("button");
+        deleteButton.type = "button";
+        deleteButton.textContent = "削除";
+        deleteButton.addEventListener("click", () => {
+          taskArray = taskArray.filter((t) => t.id !== task.id);
+          update();
+        });
+        taskDiv.append(deleteButton);
+        taskList.append(taskDiv);
+      }
+    }
 }
 
-function main() {
+
+
+let counter = () => {
     let count = 0;
     const countUp = document.getElementById("countUp");
     const countDi = document.getElementById("countDi");
@@ -48,3 +71,6 @@ function main() {
         countDi.innerText = count;
     })
 }
+
+counter()
+toDo()
