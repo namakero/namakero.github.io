@@ -1,29 +1,32 @@
 header {
-    display: flex;
+  position: fixed;
+}
+
+main {
+
+}
+
+footer {
+  position: fixed;
+
+}
+
+.namakero {
+  display: flex;
   flex-direction: column;
   height: 60%;
 }
 
-main{
-
-}
-
-footer{
-
-}
-
-
-/*カウンター*/
-
-#counter{
-    
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px; 
-    flex-basis: 100; height: 50;
-    color: #fff;
+/* カウンター */
+#counter {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-basis: 100;
+  height: 50;
+  color: #fff;
   background-color: #00ebac;
   border-bottom: 5px solid #00b8ac;
   margin-top: 3px;
@@ -32,13 +35,13 @@ footer{
   border-bottom: 6px solid #00b8ac;
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
   box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  animation: popupCounter 1.0s cubic-bezier(0.22, 1, 0.36, 1) 1 forwards;
 }
 
-#countUp{
-    
-    width: 50px;
-    height: 50px;
-    color: #fff;
+#countUp {
+  width: 50px;
+  height: 50px;
+  color: #fff;
   background-color: #04eb00;
   border-bottom: 5px solid #00b809;
   margin-top: 3px;
@@ -47,22 +50,23 @@ footer{
   border-bottom: 6px solid #00b809;
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
   box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
-  flex-basis: 100; height: 50;
+  flex-basis: 100;
+  height: 50;
 }
 
-#countDi{
-    font-size: 20px;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#countDi {
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#countDo{
-    width: 50px;
-    height: 50px;
-    color: #fff;
+#countDo {
+  width: 50px;
+  height: 50px;
+  color: #fff;
   background-color: #04eb00;
   border-bottom: 5px solid #00b809;
   margin-top: 3px;
@@ -71,13 +75,14 @@ footer{
   border-bottom: 6px solid #00b809;
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
   box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
-  flex-basis: 100; height: 50;
+  flex-basis: 100;
+  height: 50;
 }
 
-#countRe{
-    width: 50px;
-    height: 50px;
-    color: #fff;
+#countRe {
+  width: 50px;
+  height: 50px;
+  color: #fff;
   background-color: #04eb00;
   border-bottom: 5px solid #00b809;
   margin-top: 3px;
@@ -86,19 +91,20 @@ footer{
   border-bottom: 6px solid #00b809;
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
   box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
-  flex-basis: 100; height: 50;
+  flex-basis: 100;
+  height: 50;
 }
 
-/*toDoリスト*/
-    
+/* toDoリスト */
 #table {
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px; 
-    flex-basis: 100; height: 50;
-    color: #fff;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-basis: 100;
+  height: 50;
+  color: #fff;
   background-color: #00ebac;
   border-bottom: 5px solid #00b8ac;
   margin-top: 3px;
@@ -107,10 +113,38 @@ footer{
   border-bottom: 6px solid #00b8ac;
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
   box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  animation: popupTodoList 1.0s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-#enter{
-    color: #fff;
+@keyframes popupCounter {
+  0% {
+    transform: translateY(40px) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1.0);
+  }
+  80%, 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes popupTodoList {
+  0% {
+    transform: translateY(40px) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1.0);
+  }
+  80%, 100% {
+    opacity: 1;
+  }
+}
+
+
+#enter {
+  color: #fff;
   background-color: #04eb00;
   border-bottom: 5px solid #00b809;
   margin-top: 3px;
@@ -122,27 +156,36 @@ footer{
 }
 
 html {
-    background-color: #b1d90f;
-    font-size: 10px;
-    font-family: "Open Sans" , sans-serif;
+  background-color: #b1d90f;
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
 }
 
 h1 {
-    font-size: 40px;
-    text-align: center;
+  font-size: 40px;
+  text-align: center;
+}
+
+h2 {
+  font-size:30px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 20px;
 }
 
 body {
-    width: 80%;
-    height: 20%;
-    margin: 0 auto;
-    background-color: #FF9500;
-    padding: 100px 20px 20px 20px;
-    border: 5px solid black;
-  }
+  width: 80%;
+  height: 20%;
+  margin: 0 auto;
+  background-color: #FF9500;
+  padding: 100px 20px 20px 20px;
+  border: 5px solid black;
+}
 
-  img {
-    margin:auto;
-    width: 80%;
-    height: 80%;
-  }
+img {
+  margin: auto;
+  width: 80%;
+  height: 80%;
+}
