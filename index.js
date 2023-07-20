@@ -1,3 +1,32 @@
+//MySQL's setting
+
+const mysql = require("mysql2");
+
+const connection = mysql.createConnectin({
+  host: "localhost",
+  user: "root",
+  password: "1ntMaxiMaxSmalls;",
+  database: "todolist"
+});
+
+connection.connect((err) => {
+  if (err) {
+    console.log("err connection");
+  } else {
+    console.log("success connection");
+  }
+});
+
+//neoTodoList
+
+const todoList = () => {
+  
+
+
+}
+
+//toDolist
+
 let toDo = () => {
   let taskArray = [];
   let id = 0;
@@ -9,7 +38,7 @@ let toDo = () => {
     inputText.value = "";
     const task = {
       content: content,
-      id: id, 
+      id: id,
     };
     id++;
     taskArray.push(task);
@@ -17,13 +46,13 @@ let toDo = () => {
   });
 
   let update = () => {
-    const taskList = document.getElementById("list");
-    while(taskList.firstChild !== null) {
+    const taskList = document.getElementById("list1");
+    while (taskList.firstChild !== null) {
       taskList.removeChild(taskList.firstChild);
     }
-    for(let i = 0; i < taskArray.length; i++){
+    for (let i = 0; i < taskArray.length; i++) {
       const task = taskArray[i];
-      
+
 
       const taskDiv = document.createElement("div");
       taskDiv.className = "task";
@@ -42,7 +71,7 @@ let toDo = () => {
   }
 }
 
-//counterrrrrrrrrrrrrrrrrrrrrrr
+//counter
 
 let counter = () => {
   let count = 0;
@@ -52,24 +81,24 @@ let counter = () => {
   const countRe = document.getElementById("countRe");
 
   countUp.addEventListener("click", function () {
-      count += 1;
-      if(count > 99999){
-          count = 0;
-      }
-      countDi.innerHTML = count;
+    count += 1;
+    if (count > 99999) {
+      count = 0;
+    }
+    countDi.innerHTML = count;
   })
 
   countDo.addEventListener("click", function () {
-      count -= 1;
-      if(count < 0){
-          count = 0;
-      }
-      countDi.innerText = count;
+    count -= 1;
+    if (count < 0) {
+      count = 0;
+    }
+    countDi.innerText = count;
   })
 
   countRe.addEventListener("click", function () {
-      count = 0;
-      countDi.innerText = count;
+    count = 0;
+    countDi.innerText = count;
   })
 }
 

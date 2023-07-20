@@ -11,6 +11,11 @@ footer {
 
 }
 
+#explain {
+  list-style: none;
+  font-size: 15px;
+}
+
 .namakero {
   display: flex;
   flex-direction: column;
@@ -35,7 +40,7 @@ footer {
   border-bottom: 6px solid #00b8ac;
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
   box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
-  animation: popupCounter 1.0s cubic-bezier(0.22, 1, 0.36, 1) 1 forwards;
+  animation: popup 1.0s cubic-bezier(0.5, 1, 0.8, 1) 1 forwards;
 }
 
 #countUp {
@@ -113,10 +118,11 @@ footer {
   border-bottom: 6px solid #00b8ac;
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
   box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
-  animation: popupTodoList 1.0s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  /*イージス関数の値をいじると速度変わる。(x1, y1, x2,)*/
+  animation: popup 1.0s cubic-bezier(0.5, 1, 0.8, 1) forwards, nextAnimation 2.0s ease-out forwards;
 }
 
-@keyframes popupCounter {
+@keyframes popup {
   0% {
     transform: translateY(40px) scale(0.8);
     opacity: 0;
@@ -128,20 +134,6 @@ footer {
     opacity: 1;
   }
 }
-
-@keyframes popupTodoList {
-  0% {
-    transform: translateY(40px) scale(0.8);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0) scale(1.0);
-  }
-  80%, 100% {
-    opacity: 1;
-  }
-}
-
 
 #enter {
   color: #fff;
