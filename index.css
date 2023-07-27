@@ -1,24 +1,27 @@
 header {
-  padding: 10px 10px 10px 10px;
+  margin: 0;
+  padding: 0;
   z-index: 10;
   position: fixed;
-  background-color: khaki;
-  height: 60px;
+  background-color: slategray;
+  height: 50px;
   width: 100%;
-  top: 0px;
-  border-top: 3px solid #000000;
-  border-bottom: 3px solid #000000;
+  top: 0;
+  border-bottom: 1px solid #000000;
 }
 
 main {
-
+  padding: 40px;
+  padding-top: 100px;
 }
 
 footer {
   position: fixed;
+  padding: 40px;
 }
 
 #explain {
+  padding: 40px;
   list-style: none;
   font-size: 15px;
   color: #000000;
@@ -29,6 +32,7 @@ footer {
 }
 
 .namakero {
+  padding: 40px;
   display: flex;
   flex-direction: column;
   height: 70%;
@@ -91,8 +95,9 @@ footer {
   flex-basis: 100;
 }
 
-/* toDoリスト */
+
 .table {
+  padding: 40px;
   height: 100px;
   display: flex;
   align-items: center;
@@ -102,6 +107,8 @@ footer {
   color: #fff;
   background-color: #00ebac;
   border-bottom: 5px solid #00b8ac;
+  margin: auto;
+  padding: auto;
   margin-top: 3px;
   color: #fff;
   background: #00ebac;
@@ -158,8 +165,7 @@ h3 {
 }
 
 body {
-  margin: 0 auto;
-  padding: 100px 20px 20px 20px;
+  margin: 0;
   background-image: url(images/back.jpg);
   background-size: cover;
   background-position: 51%;
