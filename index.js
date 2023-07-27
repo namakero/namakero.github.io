@@ -1,29 +1,12 @@
-//MySQL's setting
+import {ref, createApp} from "https://unpkg.com/vue@3.2.4/dist/vue.esm-browser.prod.js";
 
-const mysql = require("mysql2");
-
-const connection = mysql.createConnectin({
-  host: "localhost",
-  user: "root",
-  password: "1ntMaxiMaxSmalls;",
-  database: "todolist"
+const app = createApp({
+  setup() {
+    const isActive = ref(false);
+    return {isActive};
+  },
 });
-
-connection.connect((err) => {
-  if (err) {
-    console.log("err connection");
-  } else {
-    console.log("success connection");
-  }
-});
-
-//neoTodoList
-
-const todoList = () => {
-  
-
-
-}
+app.mount("#app");
 
 //toDolist
 
@@ -31,9 +14,9 @@ let toDo = () => {
   let taskArray = [];
   let id = 0;
 
-  const enter = document.getElementById("enter");
+  const enter = document.getElementsByClassName("enter");
   enter.addEventListener("click", () => {
-    const inputText = document.getElementById("inputText");
+    const inputText = document.getElementsByClassName("inputText");
     const content = inputText.value;
     inputText.value = "";
     const task = {

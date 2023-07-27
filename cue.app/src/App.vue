@@ -24,3 +24,20 @@ export default {
   margin-top: 60px;
 }
 </style>
+
+<template>
+  <div>
+    <main-header/>
+      <router-view/>
+  </div>
+</template>
+
+<script>
+  import MainHeader from '../javascript/components/MainHeader.vue'
+
+  export default {
+  components: {
+    MainHeader
+  }
+}
+</script>
