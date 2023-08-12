@@ -14,9 +14,9 @@ let toDo = () => {
   let taskArray = [];
   let id = 0;
 
-  const enter = document.getElementsByClassName("enter");
+  const enter = document.getElementById("enter");
   enter.addEventListener("click", () => {
-    const inputText = document.getElementsByClassName("inputText");
+    const inputText = document.getElementById("inputText");
     const content = inputText.value;
     inputText.value = "";
     const task = {
